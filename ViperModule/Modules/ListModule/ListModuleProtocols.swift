@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ListModuleModuleInput {
-	var moduleOutput: ListModuleModuleOutput? { get }
+    var moduleOutput: ListModuleModuleOutput? { get }
 }
 
 protocol ListModuleModuleOutput: class {

@@ -10,7 +10,7 @@ import UIKit
 import PinLayout
 
 final class ListModuleViewController: UIViewController {
-	private let output: ListModuleViewOutput
+    private let output: ListModuleViewOutput
     private let tableView = UITableView()
     private let addCityButton = UIButton(type: .system)
 
@@ -18,10 +18,10 @@ final class ListModuleViewController: UIViewController {
 
     init(output: ListModuleViewOutput) {
         self.output = output
-        
+
         super.init(nibName: nil, bundle: nil)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -43,9 +43,9 @@ final class ListModuleViewController: UIViewController {
     }
 
     override func viewDidLoad() {
-		super.viewDidLoad()
+        super.viewDidLoad()
         self.output.viewDidLoad()
-	}
+    }
 }
 
 extension ListModuleViewController: ListModuleViewInput {

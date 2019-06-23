@@ -9,11 +9,11 @@
 import Foundation
 
 final class ListModulePresenter {
-	weak var view: ListModuleViewInput?
+    weak var view: ListModuleViewInput?
     weak var moduleOutput: ListModuleModuleOutput?
 
     private let router: ListModuleRouterInput
-	private let interactor: ListModuleInteractorInput
+    private let interactor: ListModuleInteractorInput
 
     init(router: ListModuleRouterInput, interactor: ListModuleInteractorInput) {
         self.router = router
@@ -47,6 +47,8 @@ extension ListModulePresenter: ListModuleInteractorOutput {
 
 private extension ListModulePresenter {
     func makeViewModels(cities: [City]) -> [CityViewModel] {
-        return cities.map { CityViewModel(name: $0.name) }
+        return cities.map {
+            CityViewModel(name: $0.name)
+        }
     }
 }
